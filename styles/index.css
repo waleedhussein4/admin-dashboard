@@ -1,0 +1,10 @@
+:root {
+    --font-size: 20px;
+
+    font-size: var(--font-size);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
