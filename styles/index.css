@@ -8,12 +8,17 @@
     src: url(../fonts/futura/Futura\ Bold\ font.ttf);
 }
 
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
+
 :root {
-    --font-size: 20px;
-    --font-family: "futura";
+    --font-size: 18px;
+    --font: "roboto";
 
     font-size: var(--font-size);
-    font-family: var(--font-family);
+    font-family: var(--font);
 }
 
 * {
@@ -49,7 +54,8 @@ button:active {
     background-color: rgb(68, 138, 218);
     color: whitesmoke;
     padding: 20px;
-    font-weight: 600;
+    font-weight: 900;
+    line-height: 2em;
     
     grid-area: sidebar;
     display: grid;
@@ -60,6 +66,10 @@ button:active {
 .sidebar li {
     list-style-type: none;
     margin: 8px;
+}
+
+.logo {
+    font-size: 1.6em;
 }
 
 
@@ -79,14 +89,14 @@ button:active {
     align-items: center;
 
     height: fit-content;
-    padding: 10px;
+    padding: 18px 30px 10px 30px;
 }
 
 .search {
     display: flex;
     align-items: center;
     gap: 10px;
-    justify-content: center;
+    justify-content: flex-start;
 
     height: 1.5em;
     width: 60%;
@@ -117,9 +127,9 @@ button:active {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
+    gap: 1em;
 
-    width: 40%;
+    width: fit-content;
     height: 1.5em;
     font-weight: bold;
 }
@@ -135,9 +145,8 @@ button:active {
 }
 
 .personal button:last-of-type img {
-    width: 2em;
-    aspect-ratio: 1/1;
-    border: 2px solid black;
+    width: 3em;
+    height: 3em;
     border-radius: 100%;
 }
 
@@ -245,6 +254,7 @@ button:active {
 .title {
     font-weight: 900;
     font-size: 1.2em;
+    margin-bottom: 8px;
 }
 
 .announcement-wrapper {
@@ -287,8 +297,21 @@ button:active {
 .trending-item {
     font-size: 0.8em;
     padding: 6px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
 
 .trending p:nth-of-type(1) {
     font-weight: bold;
+}
+
+.trending p:nth-of-type(2) {
+    color: gray;
+}
+
+.trending-item img {
+    width: 3em;
+    height: 3em;
+    border-radius: 100%;
 }
