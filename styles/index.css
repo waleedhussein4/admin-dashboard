@@ -275,5 +275,20 @@ button:active {
 }
 
 .trending {
-    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.trending-item {
+    font-size: 0.8em;
+    padding: 6px;
+}
+
+.trending p:nth-of-type(1) {
+    font-weight: bold;
 }
